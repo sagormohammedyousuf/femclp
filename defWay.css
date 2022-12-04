@@ -1,0 +1,114 @@
+
+.footer-nav {
+    columns: 2;
+    gap: clamp(var(--size-200),30vw, var(--size-900))
+ 
+}
+
+.footer-nav a {
+    color: var(--clr-neutral-100);
+    text-decoration: none;
+}
+
+.footer-nav a:is(:hover,
+ :focus) {
+    color: var(--clr-accent-400);
+}
+
+@media(min-width: 50em){
+    .primary-footer-wrapper{
+        grid-template-areas: "logo-social nav form";
+    }
+
+    
+    .primary-footer-logo-social{
+        
+        justify-content: space-between;
+        gap: var(--size-700);
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        
+    }
+
+    
+.fix-justify-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+}
+
+/* 
+  social list  */
+
+
+.social-list {
+    display: flex;
+    gap: var(--size-500);
+    margin-top: 80px;
+}
+
+.social-icon {
+    width: var(--size-500);
+    height: 20px;
+    fill:  var(--clr-neutral-100)
+    
+}
+
+.social-list a:is(:hover, :focus) .social-icon{
+    fill: var(--clr-accent-400);
+}
+
+@media(max-width: 50em){
+    .social-list{
+        margin: 2px 0 0px 0;
+       
+    }
+
+    .copy::after{
+        content:"Copyright 2022, All Right Reversed";
+        font-family: 'Roboto', sans-serif;
+        
+    }
+}
+
+@media(min-width: 50em){
+  
+
+    .social-icon{
+        width: var(--size-400);
+    }
+
+    /* .copy{
+        display: none;
+    } */
+}
+
+
+/* footer form  */
+form{
+    display: flex;
+    gap: var(--size-300)
+    
+}
+
+.input-email{
+    border-radius: 100vw;
+    border: 0;
+    outline: none;
+    padding: var(--size-300) var(--size-400);
+}
+ 
+
+
+.button[data-type="form"]{
+    /* padding: 0.4em 1.7em; */
+    box-shadow: none;
+    
+    
+}
+
+ .copyright {
+    margin-top: 10px;
+}
